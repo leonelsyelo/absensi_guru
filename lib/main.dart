@@ -1,6 +1,5 @@
 
-import 'package:dasar_flutter_1/pages/dashboard_page.dart';
-import 'package:dasar_flutter_1/pages/splash_screen.dart';
+import 'package:absensi_guru/leo_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -18,6 +17,6 @@ class ApkLeo extends StatefulWidget {
 class _MyLeoState extends State<ApkLeo> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: SplashScreen());
+    return MaterialApp(debugShowCheckedModeBanner: false, home: LeoScreen());
   }
 }

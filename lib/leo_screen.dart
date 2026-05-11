@@ -1,14 +1,15 @@
 import 'dart:async';
+import 'package:absensi_guru/leo_login.dart';
 import 'package:flutter/material.dart';
 
-class SplashScreenPage extends StatefulWidget {
-  const SplashScreenPage({super.key});
+class LeoScreen extends StatefulWidget {
+  const LeoScreen({super.key});
 
   @override
-  State<SplashScreenPage> createState() => _SplashScreenPageState();
+  State<LeoScreen> createState() => _LeoScreen();
 }
 
-class _SplashScreenPageState extends State<SplashScreenPage> {
+class _LeoScreen extends State<LeoScreen> {
   late Timer t;
 
   @override
@@ -17,7 +18,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
       const Duration(seconds: 4),
           (timer) => Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => LoginPage()),
+        MaterialPageRoute(builder: (context) => LeoLogin()),
       ),
     );
     super.initState();
@@ -36,7 +37,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "People App",
+              "Absensi Guru App",
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 36,
@@ -48,14 +49,6 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
             SizedBox(height: 150),
             Text(
               'Developed By',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-              ),
-            ),
-            Text(
-              'Leo',
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
