@@ -24,7 +24,7 @@ class _LeoRegister extends State<LeoRegister> {
         _eye = Icons.remove_red_eye;
       } else {
         _regis = true;
-        _eye = Icons.remove_red_eye;
+        _eye = Icons.remove_red_eye_outlined;
       }
     });
   }
@@ -38,21 +38,13 @@ class _LeoRegister extends State<LeoRegister> {
         width: size.width,
         height: size.height,
         decoration: BoxDecoration(
-          gradient: LinearGradient(colors: [Colors.grey, Colors.black]),
+          gradient: LinearGradient(colors: [Colors.blue, Colors.blueAccent]),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Daftar",
-              style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-                color: Colors.white,
-              ),
-            ),
-            Text(
-              "Disini",
+              "Daftar Di sini",
               style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
@@ -64,7 +56,7 @@ class _LeoRegister extends State<LeoRegister> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(width: 12),
-                Text("Name User", style: TextStyle(fontWeight: FontWeight.bold)),
+                Text("User Name", style: TextStyle(fontWeight: FontWeight.bold)),
               ],
             ),
             TextField(
@@ -84,7 +76,7 @@ class _LeoRegister extends State<LeoRegister> {
               children: [
                 SizedBox(width: 12),
                 Text(
-                  "User Gmail Name",
+                  "User Name Gmail",
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
               ],
@@ -152,8 +144,8 @@ class _LeoRegister extends State<LeoRegister> {
                 OutlinedButton(
                   style: OutlinedButton.styleFrom(
                     foregroundColor: Colors.white,
-                    backgroundColor: Colors.red,
-                    side: BorderSide(color: Colors.blue),
+                    backgroundColor: Colors.black,
+                    side: BorderSide(color: Colors.white),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
@@ -164,16 +156,16 @@ class _LeoRegister extends State<LeoRegister> {
                       MaterialPageRoute(builder: (context) => LeoLogin()),
                     );
                   },
-                  child: Text("Batal"),
+                  child: Text("Kembali"),
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     foregroundColor: Colors.white,
-                    backgroundColor: Colors.blue,
+                    backgroundColor: Colors.black,
                   ),
                   onPressed: () {
                     if (_name.text == "syello" &&
-                        _password.text == "syello") {
+                        _password.text == "ganteng") {
                       showDialog(
                         context: context,
                         builder: (context) =>
@@ -183,8 +175,8 @@ class _LeoRegister extends State<LeoRegister> {
                       showDialog(
                         context: context,
                         builder: (context) => AlertDialog(
-                          title: Text("Password"),
-                          content: Text("Salah"),
+                          title: Text("Pendaftaran Gagal"),
+                          content: Text("Harap isi Format Dengan Benar"),
                         ),
                       );
                     }

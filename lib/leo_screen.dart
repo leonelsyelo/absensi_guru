@@ -10,13 +10,13 @@ class LeoScreen extends StatefulWidget {
 }
 
 class _LeoScreen extends State<LeoScreen> {
-  late Timer t;
+  late Timer w;
 
   @override
   void initState() {
-    t = Timer.periodic(
-      const Duration(seconds: 4),
-          (timer) => Navigator.pushReplacement(
+    w = Timer.periodic(
+      const Duration(seconds: 5),
+      (timer) => Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => LeoLogin()),
       ),
@@ -31,28 +31,32 @@ class _LeoScreen extends State<LeoScreen> {
         width: size.width,
         height: size.height,
         decoration: BoxDecoration(
-          gradient: RadialGradient(colors: [Colors.grey, Colors.black]),
+          image: DecorationImage(
+            image: AssetImage("images/assets/logo.jpg"),
+            fit: BoxFit.contain,
+            scale: 0.5,
+          ),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Absensi Guru App",
+              "Absensi Guru",
               style: TextStyle(
-                color: Colors.white,
+                color: Colors.black,
                 fontSize: 36,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 150),
-            Icon(Icons.people, size: 80, color: Colors.white),
-            SizedBox(height: 150),
+            SizedBox(height: 200),
+            Icon(Icons.border_color_sharp, size: 80, color: Colors.white),
+            SizedBox(height: 220),
             Text(
-              'Developed By',
+              'Made in LeoKi',
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
-                color: Colors.white,
+                color: Colors.black,
               ),
             ),
           ],

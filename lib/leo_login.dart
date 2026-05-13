@@ -1,5 +1,4 @@
 import 'package:absensi_guru/leo_register.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class LeoLogin extends StatefulWidget {
@@ -10,22 +9,19 @@ class LeoLogin extends StatefulWidget {
 }
 
 class _LeoLogin extends State<LeoLogin> {
-  TextEditingController _username = TextEditingController();
-  TextEditingController _password = TextEditingController();
+  final TextEditingController _username = TextEditingController();
+  final TextEditingController _password = TextEditingController();
+  bool _mataMelek = true;
+  IconData _mataMerem = Icons.remove_red_eye;
 
-  bool _isSecure = true;
-  IconData _isObsecureIcon = Icons.remove_red_eye;
-
-
-
-  void isObsecure() {
+  void isObscureText() {
     setState(() {
-      if (_isSecure) {
-        _isSecure = false;
-        _isObsecureIcon = CupertinoIcons.eye;
+      if (_mataMelek) {
+        _mataMelek = false;
+        _mataMerem = Icons.remove_red_eye_outlined;
       } else {
-        _isSecure = true;
-        _isObsecureIcon = CupertinoIcons.eye_fill;
+        _mataMelek = true;
+        _mataMerem = Icons.remove_red_eye;
       }
     });
   }
@@ -39,13 +35,13 @@ class _LeoLogin extends State<LeoLogin> {
         width: size.width,
         height: size.height,
         decoration: BoxDecoration(
-          gradient: LinearGradient(colors: [Colors.grey, Colors.black]),
+          gradient: LinearGradient(colors: [Colors.blue, Colors.blueAccent]),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Absensi App",
+              "Absensi Guru",
               style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
@@ -57,13 +53,13 @@ class _LeoLogin extends State<LeoLogin> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(width: 12),
-                Text("Username", style: TextStyle(fontWeight: FontWeight.bold)),
+                Text("Gmail", style: TextStyle(fontWeight: FontWeight.bold)),
               ],
             ),
             TextField(
               controller: _username,
               decoration: InputDecoration(
-                hintText: "Username",
+                hintText: "Isi Gmail",
                 fillColor: Colors.white,
                 filled: true,
                 border: OutlineInputBorder(
@@ -71,40 +67,40 @@ class _LeoLogin extends State<LeoLogin> {
                 ),
               ),
             ),
-            SizedBox(width: 70),
+            SizedBox(height: 20),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(width: 12),
-                Text("Password", style: TextStyle(fontWeight: FontWeight.bold)),
+                Text("pasword", style: TextStyle(fontWeight: FontWeight.bold)),
               ],
             ),
             TextField(
               controller: _password,
-              obscureText: _isSecure,
+              obscureText: _mataMelek,
               decoration: InputDecoration(
-                hintText: "Gmail",
+                hintText: "Password",
                 fillColor: Colors.white,
                 filled: true,
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),
                 suffixIcon: IconButton(
-                  onPressed: isObsecure,
-                  icon: Icon(_isObsecureIcon),
+                  onPressed: isObscureText,
+                  icon: Icon(_mataMerem),
                 ),
               ),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 OutlinedButton(
                   style: OutlinedButton.styleFrom(
                     foregroundColor: Colors.white,
-                    backgroundColor: Colors.red,
-                    side: BorderSide(color: Colors.blue),
-                    shape: RoundedRectangleBorder(
+                    backgroundColor: Colors.black,
+                    side: BorderSide(color: Colors.white),
+                    shape: RoundedSuperellipseBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
@@ -116,38 +112,30 @@ class _LeoLogin extends State<LeoLogin> {
                   },
                   child: Text("Daftar"),
                 ),
-              ],
-            ),
-            SizedBox(height: 0.75),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SizedBox(width: 10),
-                Row(crossAxisAlignment: CrossAxisAlignment.end),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     foregroundColor: Colors.white,
-                    backgroundColor: Colors.blue,
+                    backgroundColor: Colors.black,
                   ),
                   onPressed: () {
-                    if (_username.text == "leonel ganteng" &&
-                        _password.text == "ganteng") {
+                    if (_username.text == "leonel@gmail.com" &&
+                        _password.text == "latolato") {
                       showDialog(
                         context: context,
                         builder: (context) =>
-                            AlertDialog(title: Text("Login sukses")),
+                            AlertDialog(title: Text("login sukses")),
                       );
                     } else {
                       showDialog(
                         context: context,
                         builder: (context) => AlertDialog(
-                          title: Text("Login"),
-                          content: Text("gagal boy"),
+                          title: Text("Login Gagal"),
+                          content: Text("Harap Isi Dengan Benar"),
                         ),
                       );
                     }
                   },
-                  child: Text("Login"),
+                  child: Text("login"),
                 ),
               ],
             ),
