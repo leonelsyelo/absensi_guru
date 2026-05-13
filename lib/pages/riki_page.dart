@@ -1,4 +1,3 @@
-import 'package:absensi_guru/main.dart';
 import 'package:flutter/material.dart';
 
 class RikiPage extends StatefulWidget {
@@ -37,20 +36,42 @@ class _RikiPageState extends State<RikiPage> {
        ),
       ),
       drawer: Drawer(
-        elevation: 5,
-        child: Container(
-          width: double.infinity,
-          height:double.infinity,
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: [Colors.white],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomRight,
-            ),
+        child: Column(
+          children: [
+        AppBar(
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+            Image.asset(
+              ('assets/images/gufron.jpg'),
+            width: 30,
+            height: 30,
+            fit: BoxFit.fill,
           ),
+        ],
         ),
       ),
-    );
+            TextButton(
+              onPressed: () {
+                setState(() {
+                  showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(title: Text("silakan edit")),
+                  );
+                });
+              },
+              child: Text(
+                "edit profail",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 23),
+              ),
+            ),
+
+              ],
+        ),
+      ),
+
+
+        );
   }
 }
 
