@@ -1,7 +1,7 @@
 
 import 'package:absensi_guru/model/leo_model_tkj.dart';
 
-List<LeoModelTkj > infos = [
+List<LeoModelTkj > tkj1 = [
   LeoModelTkj (
     name: "Arul",
     kelas: "10",

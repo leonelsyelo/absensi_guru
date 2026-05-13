@@ -138,7 +138,7 @@ class _LeoLogin extends State<LeoLogin> {
                   child: Text("login"),
                 ),
               ],
-            ),
+            )
           ],
         ),
       ),

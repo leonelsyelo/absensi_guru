@@ -2,7 +2,7 @@
 
 import 'package:absensi_guru/model/leo_model_rpl.dart';
 
-List<LeoModelRpl > infos = [
+List<LeoModelRpl > rpl1 = [
   LeoModelRpl (
     name: "Ambrik",
     kelas: "10",

@@ -1,7 +1,7 @@
 
 import 'package:absensi_guru/model/leo_model_sija.dart';
 
-List<LeoModelSija> infos = [
+List<LeoModelSija> sija = [
   LeoModelSija(
     name: "Aleyaa",
     kelas: "10",
