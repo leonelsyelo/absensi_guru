@@ -1,4 +1,5 @@
 import 'package:absensi_guru/leo_login.dart';
+import 'package:absensi_guru/pages/riki_page.dart' show RikiPage;
 import 'package:flutter/material.dart';
 
 class LeoRegister extends StatefulWidget {
@@ -162,10 +163,12 @@ class _LeoRegister extends State<LeoRegister> {
                   style: ElevatedButton.styleFrom(
                     foregroundColor: Colors.white,
                     backgroundColor: Colors.black,
+                    side: BorderSide(color: Colors.white),
                   ),
                   onPressed: () {
                     if (_name.text == "syello" &&
                         _password.text == "ganteng") {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => RikiPage()));
                       showDialog(
                         context: context,
                         builder: (context) =>

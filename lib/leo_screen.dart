@@ -15,7 +15,7 @@ class _LeoScreen extends State<LeoScreen> {
   @override
   void initState() {
     w = Timer.periodic(
-      const Duration(seconds: 5),
+      const Duration(seconds: 3),
       (timer) => Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => LeoLogin()),
@@ -32,7 +32,7 @@ class _LeoScreen extends State<LeoScreen> {
         height: size.height,
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("images/assets/logo.jpg"),
+            image: AssetImage("assets/images/logo.jpg"),
             fit: BoxFit.contain,
             scale: 0.5,
           ),
@@ -49,7 +49,7 @@ class _LeoScreen extends State<LeoScreen> {
               ),
             ),
             SizedBox(height: 200),
-            Icon(Icons.border_color_sharp, size: 80, color: Colors.white),
+            Icon(Icons.border_color_sharp, size: 80, color: Colors.black),
             SizedBox(height: 220),
             Text(
               'Made in LeoKi',
