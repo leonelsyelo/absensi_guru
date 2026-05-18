@@ -1,28 +1,31 @@
-import 'package:absensi_guru/leo_register.dart';
-import 'package:absensi_guru/pages/riki_page.dart';
+import 'package:absensi_guru/leo_login.dart';
+import 'package:absensi_guru/pages/riki_page.dart' show RikiPage;
 import 'package:flutter/material.dart';
 
-class LeoLogin extends StatefulWidget {
-  const LeoLogin({super.key});
+class LeoRegister extends StatefulWidget {
+  const LeoRegister({super.key});
 
   @override
-  State<LeoLogin> createState() => _LeoLogin();
+  State<LeoRegister> createState() => _LeoRegister();
 }
 
-class _LeoLogin extends State<LeoLogin> {
+class _LeoRegister extends State<LeoRegister> {
   final TextEditingController _username = TextEditingController();
+  final TextEditingController _confrimPw = TextEditingController();
   final TextEditingController _password = TextEditingController();
-  bool _mataMelek = true;
-  IconData _mataMerem = Icons.remove_red_eye;
+  final TextEditingController _name = TextEditingController();
 
-  void isObscureText() {
+  IconData _eye = Icons.remove_red_eye;
+  bool _regis = true;
+
+  void eye() {
     setState(() {
-      if (_mataMelek) {
-        _mataMelek = false;
-        _mataMerem = Icons.remove_red_eye_outlined;
+      if (_regis) {
+        _regis = false;
+        _eye = Icons.remove_red_eye;
       } else {
-        _mataMelek = true;
-        _mataMerem = Icons.remove_red_eye;
+        _regis = true;
+        _eye = Icons.remove_red_eye_outlined;
       }
     });
   }
@@ -42,7 +45,7 @@ class _LeoLogin extends State<LeoLogin> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Absensi Guru",
+              "Daftar Di sini",
               style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
@@ -54,13 +57,13 @@ class _LeoLogin extends State<LeoLogin> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(width: 12),
-                Text("Gmail", style: TextStyle(fontWeight: FontWeight.bold)),
+                Text("User Name", style: TextStyle(fontWeight: FontWeight.bold)),
               ],
             ),
             TextField(
-              controller: _username,
+              controller: _name,
               decoration: InputDecoration(
-                hintText: "Isi Gmail",
+                hintText: "Name User",
                 fillColor: Colors.white,
                 filled: true,
                 border: OutlineInputBorder(
@@ -68,17 +71,39 @@ class _LeoLogin extends State<LeoLogin> {
                 ),
               ),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 30),
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(width: 12),
-                Text("pasword", style: TextStyle(fontWeight: FontWeight.bold)),
+                Text(
+                  "User Name Gmail",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
               ],
             ),
             TextField(
-              controller: _password,
-              obscureText: _mataMelek,
+              controller: _username,
+              decoration: InputDecoration(
+                hintText: "Name Gmail",
+                fillColor: Colors.white,
+                filled: true,
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+              ),
+            ),
+            SizedBox(height: 30),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(width: 12),
+                Text("Password", style: TextStyle(fontWeight: FontWeight.bold)),
+              ],
+            ),
+            TextField(
+              controller: _confrimPw,
+              obscureText: _regis,
               decoration: InputDecoration(
                 hintText: "Password",
                 fillColor: Colors.white,
@@ -86,13 +111,34 @@ class _LeoLogin extends State<LeoLogin> {
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),
-                suffixIcon: IconButton(
-                  onPressed: isObscureText,
-                  icon: Icon(_mataMerem),
-                ),
+                suffixIcon: IconButton(onPressed: eye, icon: Icon(_eye)),
               ),
             ),
             SizedBox(height: 20),
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(width: 12),
+                Text(
+                  "Confrim Password",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
+              ],
+            ),
+            TextField(
+              controller: _password,
+              obscureText: _regis,
+              decoration: InputDecoration(
+                hintText: "Confirm Password",
+                fillColor: Colors.white,
+                filled: true,
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                suffixIcon: IconButton(onPressed: eye, icon: Icon(_eye)),
+              ),
+            ),
+            SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -101,17 +147,17 @@ class _LeoLogin extends State<LeoLogin> {
                     foregroundColor: Colors.white,
                     backgroundColor: Colors.black,
                     side: BorderSide(color: Colors.white),
-                    shape: RoundedSuperellipseBorder(
+                    shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
                     ),
                   ),
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => LeoRegister()),
+                      MaterialPageRoute(builder: (context) => LeoLogin()),
                     );
                   },
-                  child: Text("Daftar"),
+                  child: Text("Kembali"),
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -120,28 +166,28 @@ class _LeoLogin extends State<LeoLogin> {
                     side: BorderSide(color: Colors.white),
                   ),
                   onPressed: () {
-                    if (_username.text == "leonel@gmail.com" &&
-                        _password.text == "latolato") {
+                    if (_name.text == "syello" &&
+                        _password.text == "ganteng") {
                       Navigator.push(context, MaterialPageRoute(builder: (context) => RikiPage()));
                       showDialog(
                         context: context,
                         builder: (context) =>
-                            AlertDialog(title: Text("login sukses")),
+                            AlertDialog(title: Text("Pendaftaran sukses")),
                       );
                     } else {
                       showDialog(
                         context: context,
                         builder: (context) => AlertDialog(
-                          title: Text("Login Gagal"),
-                          content: Text("Harap Isi Dengan Benar"),
+                          title: Text("Pendaftaran Gagal"),
+                          content: Text("Harap isi Format Dengan Benar"),
                         ),
                       );
                     }
                   },
-                  child: Text("login"),
+                  child: Text("Daftar"),
                 ),
               ],
-            )
+            ),
           ],
         ),
       ),

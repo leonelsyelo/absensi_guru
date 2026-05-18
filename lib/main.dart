@@ -1,23 +1,22 @@
-import 'package:absensi_guru/pages/rikidasboard_page.dart';
+
+import 'package:absensi_guru/leo_screen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(Riki());
+  runApp(AbsensiGuru());
 }
 
-class Riki extends StatefulWidget {
-  const Riki({super.key});
+class AbsensiGuru extends StatefulWidget {
+  const AbsensiGuru({super.key});
 
   @override
-  State<Riki> createState() => _RikiState();
+  State<AbsensiGuru> createState() => _MyAbsensi();
 }
 
-class _RikiState extends State<Riki> {
+class _MyAbsensi extends State<AbsensiGuru> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: RikidasboardPage(),
-    );
+    return MaterialApp(debugShowCheckedModeBanner: false, home: LeoScreen());
   }
 }
