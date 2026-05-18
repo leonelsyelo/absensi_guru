@@ -13,7 +13,7 @@ class _RikirplPageState extends State<RikirplPage> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.blue,
-          title: const Column(
+          title: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(

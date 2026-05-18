@@ -1,4 +1,4 @@
-import 'package:absensi_guru/screen/leo_profile.dart';
+import 'package:absensi_guru/pages/rikidasboard_page.dart';
 import 'package:absensi_guru/services/leo_jurusan_service.dart';
 import 'package:flutter/material.dart';
 
@@ -41,7 +41,7 @@ class _LeoRplScreen extends State<LeoRplScreen> {
           IconButton(
             onPressed: () => Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => LeoProfile()),
+              MaterialPageRoute(builder: (context) => RikidasboardPage()),
             ),
             icon: Image.asset("assets/image/tupac.jpg"),
           ),

@@ -13,7 +13,7 @@ class _RikianimPageState extends State<RikianimPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        title: const Column(
+        title:  Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
@@ -34,11 +34,11 @@ class _RikianimPageState extends State<RikianimPage> {
       ),
 
       body: Container(
-          decoration: const BoxDecoration(color: Colors.white),
+          decoration:  BoxDecoration(color: Colors.white),
           child: SingleChildScrollView(
             child: Column(
               children: [
-                const Text(
+                 Text(
                   'PILIH KELAS',
                   style: TextStyle(
                     fontSize: 20,
@@ -46,18 +46,18 @@ class _RikianimPageState extends State<RikianimPage> {
                     color: Colors.black,
                   ),
                 ),
-                const SizedBox(height: 20),
+                 SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {},
                   child: Container(
-                    padding: const EdgeInsets.fromLTRB(15, 20, 15, 20),
+                    padding:  EdgeInsets.fromLTRB(15, 20, 15, 20),
                     height: 80,
                     decoration: BoxDecoration(
                       color: Colors.black,
                       border: Border.all(color: Colors.blue),
                       borderRadius: BorderRadius.circular(5),
                     ),
-                    child: const Row(
+                    child:  Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
@@ -74,18 +74,18 @@ class _RikianimPageState extends State<RikianimPage> {
                   ),
                 ),
 
-                const SizedBox(height: 20),
+                 SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {},
                   child: Container(
-                    padding: const EdgeInsets.fromLTRB(15, 20, 15, 20),
+                    padding:  EdgeInsets.fromLTRB(15, 20, 15, 20),
                     height: 80,
                     decoration: BoxDecoration(
                       color: Colors.black,
                       border: Border.all(color: Colors.blue),
                       borderRadius: BorderRadius.circular(5),
                     ),
-                    child: const Row(
+                    child:  Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [

@@ -13,7 +13,7 @@ class _RikilpkcPageState extends State<RikilpkcPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        title: const Column(
+        title: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
@@ -34,130 +34,130 @@ class _RikilpkcPageState extends State<RikilpkcPage> {
       ),
 
       body: Container(
-          decoration: const BoxDecoration(color: Colors.white),
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                const Text(
-                  'PILIH KELAS',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
+        decoration: BoxDecoration(color: Colors.white),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Text(
+                'PILIH KELAS',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                ),
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {},
+                child: Container(
+                  padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
+                  height: 80,
+                  decoration: BoxDecoration(
                     color: Colors.black,
+                    border: Border.all(color: Colors.blue),
+                    borderRadius: BorderRadius.circular(5),
                   ),
-                ),
-                const SizedBox(height: 20),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Container(
-                    padding: const EdgeInsets.fromLTRB(15, 20, 15, 20),
-                    height: 80,
-                    decoration: BoxDecoration(
-                      color: Colors.black,
-                      border: Border.all(color: Colors.blue),
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    child: const Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Text(
-                          'X LPKC 1',
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        'X LPKC 1',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
+              ),
 
-                const SizedBox(height: 20),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Container(
-                    padding: const EdgeInsets.fromLTRB(15, 20, 15, 20),
-                    height: 80,
-                    decoration: BoxDecoration(
-                      color: Colors.black,
-                      border: Border.all(color: Colors.blue),
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    child: const Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Text(
-                          'X LPKC 2',
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {},
+                child: Container(
+                  padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
+                  height: 80,
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                    border: Border.all(color: Colors.blue),
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        'X LPKC 2',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
-                const SizedBox(height: 20),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Container(
-                    padding: const EdgeInsets.fromLTRB(15, 20, 15, 20),
-                    height: 80,
-                    decoration: BoxDecoration(
-                      color: Colors.black,
-                      border: Border.all(color: Colors.blue),
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    child: const Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Text(
-                          'X LPKC 3',
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {},
+                child: Container(
+                  padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
+                  height: 80,
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                    border: Border.all(color: Colors.blue),
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        'X LPKC 3',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
-                const SizedBox(height: 20),
-                ElevatedButton(
-                  onPressed: () {},
-                  child: Container(
-                    padding: const EdgeInsets.fromLTRB(15, 20, 15, 20),
-                    height: 80,
-                    decoration: BoxDecoration(
-                      color: Colors.black,
-                      border: Border.all(color: Colors.blue),
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                    child: const Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Text(
-                          'X LPKC 4',
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {},
+                child: Container(
+                  padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
+                  height: 80,
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                    border: Border.all(color: Colors.blue),
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        'X LPKC 4',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ),
-              ],
-            ),
-          )
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
