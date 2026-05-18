@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 class Ikir1Model {
   final int id;
   final String judul;

@@ -1,9 +1,10 @@
 import 'package:absensi_guru/pages/rikidasboard_page.dart';
 import 'package:flutter/material.dart';
 
-void main(){
+void main() {
   runApp(Riki());
 }
+
 class Riki extends StatefulWidget {
   const Riki({super.key});
 
@@ -14,6 +15,9 @@ class Riki extends StatefulWidget {
 class _RikiState extends State<Riki> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false,home:RikidasboardPage());
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: RikidasboardPage(),
+    );
   }
 }

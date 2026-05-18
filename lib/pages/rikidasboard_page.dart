@@ -48,5 +48,7 @@ class _RikidasboardPageState extends State<RikidasboardPage> {
       body: mod[selecIndex]!.page,
     );
   }
+
 }
+
 
