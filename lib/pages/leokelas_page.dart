@@ -43,7 +43,7 @@ class _RikikelasPageState extends State<RikikelasPage> {
                 Text(
                 'PILIH KELAS',
                 style: TextStyle(
-                  fontSize: 20,
+                  fontSize: 40,
                   fontWeight: FontWeight.bold,
                   color: Colors.black,
                 ),

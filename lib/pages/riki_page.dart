@@ -1,6 +1,5 @@
-import 'package:absensi_guru/leo_login.dart';
-import 'package:absensi_guru/pages/riki3_page.dart';
 import 'package:absensi_guru/pages/rikikelas_page.dart';
+import 'package:absensi_guru/pages/rikiout_page.dart';
 import 'package:absensi_guru/services/kiriservice_page.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +17,7 @@ class _RikiPageState extends State<RikiPage> {
       appBar: AppBar(
         backgroundColor: Colors.blue,
         title: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
               "ABSENSI GURU",
@@ -47,8 +46,7 @@ class _RikiPageState extends State<RikiPage> {
                     backgroundImage: AssetImage("assets/images/gufron.jpg"),
                   ),
                   SizedBox(width: 40),
-                  Column(mainAxisAlignment: MainAxisAlignment.start,
-                  ),
+                  Column(crossAxisAlignment: CrossAxisAlignment.start),
                 ],
               ),
             ),
@@ -79,9 +77,9 @@ class _RikiPageState extends State<RikiPage> {
                   showDialog(
                     context: context,
                     builder: (context) =>
-                        AlertDialog(title: Text("nama:dr.leo                   "
-                                                "status:guru                   "
-                                                "mapel:agama       ")),
+                        AlertDialog(title: Text("nama:dr.leo                           "
+                                                "status:guru                           "
+                                                "mapel:agama")),
                   );
                 });
               },
@@ -105,7 +103,7 @@ class _RikiPageState extends State<RikiPage> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => LeoLogin()),
+                  MaterialPageRoute(builder: (context) => RikioutPage()),
                 );
               },
             ),
@@ -130,7 +128,7 @@ class _RikiPageState extends State<RikiPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Riki3Page()),
+                    MaterialPageRoute(builder: (context) => RikikelasPage()),
                   );
                 },
                 child: Container(
@@ -162,7 +160,7 @@ class _RikiPageState extends State<RikiPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) =>  Riki3Page()),
+                    MaterialPageRoute(builder: (context) => RikikelasPage()),
                   );
                 },
                 child: Container(
@@ -194,7 +192,7 @@ class _RikiPageState extends State<RikiPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) =>  Riki3Page()),
+                    MaterialPageRoute(builder: (context) => RikikelasPage()),
                   );
                 },
                 child: Container(
@@ -226,7 +224,7 @@ class _RikiPageState extends State<RikiPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) =>  Riki3Page()),
+                    MaterialPageRoute(builder: (context) => RikikelasPage()),
                   );
                 },
                 child: Container(
@@ -258,7 +256,7 @@ class _RikiPageState extends State<RikiPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Riki3Page()),
+                    MaterialPageRoute(builder: (context) => RikikelasPage()),
                   );
                 },
                 child: Container(
@@ -290,7 +288,7 @@ class _RikiPageState extends State<RikiPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Riki3Page()),
+                    MaterialPageRoute(builder: (context) => RikikelasPage()),
                   );
                 },
                 child: Container(
@@ -323,7 +321,7 @@ class _RikiPageState extends State<RikiPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) =>  Riki3Page()),
+                    MaterialPageRoute(builder: (context) => RikikelasPage()),
                   );
                 },
                 child: Container(
@@ -355,7 +353,7 @@ class _RikiPageState extends State<RikiPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) =>  Riki3Page()),
+                    MaterialPageRoute(builder: (context) => RikikelasPage()),
                   );
                 },
                 child: Container(
@@ -388,7 +386,7 @@ class _RikiPageState extends State<RikiPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) =>  Riki3Page()),
+                    MaterialPageRoute(builder: (context) => RikikelasPage()),
                   );
                 },
                 child: Container(
