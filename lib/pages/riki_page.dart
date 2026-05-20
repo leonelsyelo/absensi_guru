@@ -1,14 +1,8 @@
-import 'package:absensi_guru/pages/rikianim_page.dart';
-import 'package:absensi_guru/pages/rikidkv_page.dart';
-import 'package:absensi_guru/pages/rikidpib_page.dart';
-import 'package:absensi_guru/pages/rikilpkc_page.dart';
-import 'package:absensi_guru/pages/rikirpl_page.dart';
-import 'package:absensi_guru/pages/rikisija_page.dart';
-import 'package:absensi_guru/pages/rikitbsm_page.dart';
-import 'package:absensi_guru/pages/rikitkj_page.dart';
-import 'package:absensi_guru/pages/rikitkr_page.dart';
+import 'package:absensi_guru/pages/rikikelas_page.dart';
+import 'package:absensi_guru/pages/rikiout_page.dart';
 import 'package:absensi_guru/services/kiriservice_page.dart';
 import 'package:flutter/material.dart';
+
 class RikiPage extends StatefulWidget {
   const RikiPage({super.key});
 
@@ -17,7 +11,6 @@ class RikiPage extends StatefulWidget {
 }
 
 class _RikiPageState extends State<RikiPage> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,14 +40,13 @@ class _RikiPageState extends State<RikiPage> {
           children: [
             AppBar(
               title: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Image.asset(
-                    ('assets/images/gufron.jpg'),
-                    width: 30,
-                    height: 30,
-                    fit: BoxFit.fill,
+                  CircleAvatar(
+                    radius: 30,
+                    backgroundImage: AssetImage("assets/images/gufron.jpg"),
                   ),
+                  SizedBox(width: 40),
+                  Column(crossAxisAlignment: CrossAxisAlignment.start),
                 ],
               ),
             ),
@@ -72,6 +64,48 @@ class _RikiPageState extends State<RikiPage> {
                 "Edit Profile",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 23),
               ),
+            ),
+            Divider(color: Colors.black),
+            ListTile(
+              leading: Icon(Icons.account_circle, color: Colors.black),
+              title: Text(
+                "Tentang Saya",
+                style: TextStyle(color: Colors.black),
+              ),
+              onTap: () {
+                setState(() {
+                  showDialog(
+                    context: context,
+                    builder: (context) =>
+                        AlertDialog(title: Text("nama:dr.leo                           "
+                                                "status:guru                           "
+                                                "mapel:agama")),
+                  );
+                });
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.email, color: Colors.black),
+              title: Text("Email", style: TextStyle(color: Colors.black)),
+              onTap: () {
+                setState(() {
+                  showDialog(
+                    context: context,
+                    builder: (context) =>
+                        AlertDialog(title: Text("leonel@gmail.com")),
+                  );
+                });
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.output, color: Colors.black),
+              title: Text("Sign Out", style: TextStyle(color: Colors.black)),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RikioutPage()),
+                );
+              },
             ),
           ],
         ),
@@ -91,7 +125,12 @@ class _RikiPageState extends State<RikiPage> {
               ),
               SizedBox(height: 20),
               ElevatedButton(
-                onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => RikirplPage()));},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => RikikelasPage()),
+                  );
+                },
                 child: Container(
                   padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
                   height: 80,
@@ -118,7 +157,12 @@ class _RikiPageState extends State<RikiPage> {
               ),
               SizedBox(height: 20),
               ElevatedButton(
-                onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => RikisijaPage()));},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => RikikelasPage()),
+                  );
+                },
                 child: Container(
                   padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
                   height: 80,
@@ -145,7 +189,12 @@ class _RikiPageState extends State<RikiPage> {
               ),
               SizedBox(height: 20),
               ElevatedButton(
-                onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => RikilpkcPage()));},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => RikikelasPage()),
+                  );
+                },
                 child: Container(
                   padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
                   height: 80,
@@ -172,7 +221,12 @@ class _RikiPageState extends State<RikiPage> {
               ),
               SizedBox(height: 20),
               ElevatedButton(
-                onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => RikitkrPage()));},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => RikikelasPage()),
+                  );
+                },
                 child: Container(
                   padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
                   height: 80,
@@ -199,7 +253,12 @@ class _RikiPageState extends State<RikiPage> {
               ),
               SizedBox(height: 20),
               ElevatedButton(
-                onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => RikitbsmPage()));},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => RikikelasPage()),
+                  );
+                },
                 child: Container(
                   padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
                   height: 80,
@@ -226,7 +285,12 @@ class _RikiPageState extends State<RikiPage> {
               ),
               SizedBox(height: 20),
               ElevatedButton(
-                onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => RikitkjPage()));},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => RikikelasPage()),
+                  );
+                },
                 child: Container(
                   padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
                   height: 80,
@@ -254,7 +318,12 @@ class _RikiPageState extends State<RikiPage> {
 
               SizedBox(height: 20),
               ElevatedButton(
-                onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => RikianimPage()));},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => RikikelasPage()),
+                  );
+                },
                 child: Container(
                   padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
                   height: 80,
@@ -281,7 +350,12 @@ class _RikiPageState extends State<RikiPage> {
               ),
               SizedBox(height: 20),
               ElevatedButton(
-                onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => RikidpibPage()));},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => RikikelasPage()),
+                  );
+                },
                 child: Container(
                   padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
                   height: 80,
@@ -309,7 +383,12 @@ class _RikiPageState extends State<RikiPage> {
 
               SizedBox(height: 20),
               ElevatedButton(
-                onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context) => RikidkvPage()));},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => RikikelasPage()),
+                  );
+                },
                 child: Container(
                   padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
                   height: 80,

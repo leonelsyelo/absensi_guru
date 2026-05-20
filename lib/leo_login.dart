@@ -1,5 +1,6 @@
 import 'package:absensi_guru/leo_register.dart';
 import 'package:absensi_guru/pages/riki_page.dart';
+import 'package:absensi_guru/pages/rikidasboard_page.dart';
 import 'package:flutter/material.dart';
 
 class LeoLogin extends StatefulWidget {
@@ -120,9 +121,9 @@ class _LeoLogin extends State<LeoLogin> {
                     side: BorderSide(color: Colors.white),
                   ),
                   onPressed: () {
-                    if (_username.text == "leonel@gmail.com" &&
-                        _password.text == "latolato") {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => RikiPage()));
+                    if (_username.text == "l" &&
+                        _password.text == "l") {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => RikidasboardPage()));
                       showDialog(
                         context: context,
                         builder: (context) =>
