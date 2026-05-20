@@ -1,5 +1,6 @@
-import 'package:absensi_guru/pages/rikikelas_page.dart';
 import 'package:flutter/material.dart';
+
+import 'leokelas_page.dart';
 
 class RikimapelPage extends StatefulWidget {
   const RikimapelPage({super.key});

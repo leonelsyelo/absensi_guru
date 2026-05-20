@@ -1,3 +1,4 @@
+import 'package:absensi_guru/pages/riki_page.dart';
 import 'package:flutter/material.dart';
 
 class RikihistoryPage extends StatefulWidget {
@@ -37,14 +38,13 @@ class _RikihistoryPageState extends State<RikihistoryPage> {
           children: [
             AppBar(
               title: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Image.asset(
-                    ('assets/images/gufron.jpg'),
-                    width: 30,
-                    height: 30,
-                    fit: BoxFit.fill,
+                  CircleAvatar(
+                    radius: 30,
+                    backgroundImage: AssetImage("assets/images/gufron.jpg"),
                   ),
+                  SizedBox(width: 40),
+                  Column(crossAxisAlignment: CrossAxisAlignment.start),
                 ],
               ),
             ),
@@ -62,6 +62,51 @@ class _RikihistoryPageState extends State<RikihistoryPage> {
                 "Edit Profile",
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 23),
               ),
+            ),
+            Divider(color: Colors.black),
+            ListTile(
+              leading: Icon(Icons.account_circle, color: Colors.black),
+              title: Text(
+                "Tentang Saya",
+                style: TextStyle(color: Colors.black),
+              ),
+              onTap: () {
+                setState(() {
+                  showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                      title: Text(
+                        "nama:dr.leo                           "
+                        "status:guru                           "
+                        "mapel:agama",
+                      ),
+                    ),
+                  );
+                });
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.email, color: Colors.black),
+              title: Text("Email", style: TextStyle(color: Colors.black)),
+              onTap: () {
+                setState(() {
+                  showDialog(
+                    context: context,
+                    builder: (context) =>
+                        AlertDialog(title: Text("leonel@gmail.com")),
+                  );
+                });
+              },
+            ),
+            ListTile(
+              leading: Icon(Icons.output, color: Colors.black),
+              title: Text("Sign Out", style: TextStyle(color: Colors.black)),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RikiPage()),
+                );
+              },
             ),
           ],
         ),

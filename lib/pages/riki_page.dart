@@ -1,4 +1,4 @@
-import 'package:absensi_guru/pages/rikikelas_page.dart';
+import 'package:absensi_guru/pages/riki3_page.dart';
 import 'package:absensi_guru/pages/rikiout_page.dart';
 import 'package:absensi_guru/services/kiriservice_page.dart';
 import 'package:flutter/material.dart';
@@ -103,7 +103,7 @@ class _RikiPageState extends State<RikiPage> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => RikioutPage()),
+                  MaterialPageRoute(builder: (context) => RikiPage()),
                 );
               },
             ),
@@ -128,7 +128,7 @@ class _RikiPageState extends State<RikiPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => RikikelasPage()),
+                    MaterialPageRoute(builder: (context) =>Riki3Page()),
                   );
                 },
                 child: Container(
@@ -160,7 +160,7 @@ class _RikiPageState extends State<RikiPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => RikikelasPage()),
+                    MaterialPageRoute(builder: (context) =>Riki3Page()),
                   );
                 },
                 child: Container(
@@ -192,7 +192,7 @@ class _RikiPageState extends State<RikiPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => RikikelasPage()),
+                    MaterialPageRoute(builder: (context) =>Riki3Page()),
                   );
                 },
                 child: Container(
@@ -224,7 +224,7 @@ class _RikiPageState extends State<RikiPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => RikikelasPage()),
+                    MaterialPageRoute(builder: (context) => Riki3Page()),
                   );
                 },
                 child: Container(
@@ -256,7 +256,7 @@ class _RikiPageState extends State<RikiPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => RikikelasPage()),
+                    MaterialPageRoute(builder: (context) => Riki3Page()),
                   );
                 },
                 child: Container(
@@ -288,7 +288,7 @@ class _RikiPageState extends State<RikiPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => RikikelasPage()),
+                    MaterialPageRoute(builder: (context) => Riki3Page()),
                   );
                 },
                 child: Container(
@@ -321,7 +321,7 @@ class _RikiPageState extends State<RikiPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => RikikelasPage()),
+                    MaterialPageRoute(builder: (context) => Riki3Page()),
                   );
                 },
                 child: Container(
@@ -353,7 +353,7 @@ class _RikiPageState extends State<RikiPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => RikikelasPage()),
+                    MaterialPageRoute(builder: (context) => Riki3Page()),
                   );
                 },
                 child: Container(
@@ -386,7 +386,7 @@ class _RikiPageState extends State<RikiPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => RikikelasPage()),
+                    MaterialPageRoute(builder: (context) => Riki3Page()),
                   );
                 },
                 child: Container(
