@@ -18,6 +18,6 @@ class AbsensiGuru extends StatefulWidget {
 class _MyAbsensi extends State<AbsensiGuru> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: RikidasboardPage());
+    return MaterialApp(debugShowCheckedModeBanner: false, home: LeoScreen());
   }
 }
