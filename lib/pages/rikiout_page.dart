@@ -1,38 +1,34 @@
 import 'package:flutter/material.dart';
 
-class RikioutPage extends StatefulWidget {
+class RikioutPage extends StatelessWidget {
   const RikioutPage({super.key});
 
-  @override
-  State<RikioutPage> createState() => _RikioutPageState();
-}
-
-class _RikioutPageState extends State<RikioutPage> {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return Scaffold(
       body: Container(
-        height: size.height,
         width: size.width,
+        height: size.height,
         decoration: BoxDecoration(
-          gradient: LinearGradient(colors: [Colors.white30, Colors.blueAccent]),
+          gradient: LinearGradient(colors: [Colors.white70,Colors.blue,Colors.blueAccent]),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.output, size: 200, color: Colors.black),
+            Icon(
+              Icons.output,
+              size: 300,
+              color: Colors.black,
+            ),
             Text(
-              "OUT",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 50,
-                color: Colors.black,
-              ),
+              "out",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 50,color: Colors.black),
             ),
           ],
         ),
       ),
+
     );
   }
 }

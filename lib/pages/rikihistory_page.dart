@@ -72,7 +72,7 @@ class _RikihistoryPageState extends State<RikihistoryPage> {
           child: Column(
             children: [
               Text(
-                '',
+                'Riwayat Absensi',
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
