@@ -1,4 +1,4 @@
-import 'package:absensi_guru/pages/rikikelas_page.dart';
+import 'package:absensi_guru/pages/leokelas_page.dart';
 import 'package:absensi_guru/pages/rikiout_page.dart';
 import 'package:absensi_guru/services/kiriservice_page.dart';
 import 'package:flutter/material.dart';

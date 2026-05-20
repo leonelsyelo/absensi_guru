@@ -7,6 +7,11 @@ class LeoNamaModel {
   final String jurusan;
   final Widget screen;
 
-  LeoNamaModel({required this.id, required this.nama, required this.absen, required this.jurusan, required this.screen});
-
+  LeoNamaModel({
+    required this.id,
+    required this.nama,
+    required this.absen,
+    required this.jurusan,
+    required this.screen,
+  });
 }

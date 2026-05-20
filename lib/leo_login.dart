@@ -93,56 +93,55 @@ class _LeoLogin extends State<LeoLogin> {
                 ),
               ),
             ),
-            SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                OutlinedButton(
-                  style: OutlinedButton.styleFrom(
-                    foregroundColor: Colors.white,
-                    backgroundColor: Colors.black,
-                    side: BorderSide(color: Colors.white),
-                    shape: RoundedSuperellipseBorder(
-                      borderRadius: BorderRadius.circular(20),
+            SizedBox(height: 30),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                foregroundColor: Colors.white,
+                backgroundColor: Colors.black,
+                side: BorderSide(color: Colors.white),
+              ),
+              onPressed: () {
+                if (_username.text == "l" && _password.text == "l") {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => RikidasboardPage()),
+                  );
+                  showDialog(
+                    context: context,
+                    builder: (context) =>
+                        AlertDialog(title: Text("login sukses")),
+                  );
+                } else {
+                  showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                      title: Text("Login Gagal"),
+                      content: Text("Harap Isi Dengan Benar"),
                     ),
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => LeoRegister()),
-                    );
-                  },
-                  child: Text("Daftar"),
+                  );
+                }
+              },
+              child: Text("login"),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Text(
+                  "Belum Punya Akun?",
+                  style: TextStyle(color: Colors.white),
                 ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    foregroundColor: Colors.white,
-                    backgroundColor: Colors.black,
-                    side: BorderSide(color: Colors.white),
+                TextButton(
+                  onPressed: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LeoRegister()),
                   ),
-                  onPressed: () {
-                    if (_username.text == "l" &&
-                        _password.text == "l") {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => RikidasboardPage()));
-                      showDialog(
-                        context: context,
-                        builder: (context) =>
-                            AlertDialog(title: Text("login sukses")),
-                      );
-                    } else {
-                      showDialog(
-                        context: context,
-                        builder: (context) => AlertDialog(
-                          title: Text("Login Gagal"),
-                          content: Text("Harap Isi Dengan Benar"),
-                        ),
-                      );
-                    }
-                  },
-                  child: Text("login"),
+                  child: const Text(
+                    "Daftar",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ],
-            )
+            ),
           ],
         ),
       ),

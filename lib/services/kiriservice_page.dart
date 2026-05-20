@@ -1,4 +1,4 @@
-import 'package:absensi_guru/pages/rikikelas_page.dart';
+import 'package:absensi_guru/pages/leokelas_page.dart';
 import '../models/kiri_model.dart';
 
 List<KiriModel> kiri=[
