@@ -66,6 +66,24 @@ class _RikihistoryPageState extends State<RikihistoryPage> {
           ],
         ),
       ),
+      body: Container(
+        decoration: BoxDecoration(color: Colors.white),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Text(
+                '',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                ),
+              ),
+              SizedBox(height: 20),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
