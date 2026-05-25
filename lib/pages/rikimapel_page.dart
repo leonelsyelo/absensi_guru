@@ -27,9 +27,18 @@ class _RikimapelPageState extends State<RikimapelPage> {
               ),
             ),
             SizedBox(height: 2),
-            Text(
-              "kelas X",
-              style: TextStyle(fontSize: 15, color: Colors.white),
+            Row(
+              children: [
+                Column(crossAxisAlignment: CrossAxisAlignment.center,),
+                Text(
+                  "kelas X",
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+              ],
             ),
           ],
         ),
@@ -39,12 +48,28 @@ class _RikimapelPageState extends State<RikimapelPage> {
         child: SingleChildScrollView(
           child: Column(
             children: [
+              Row(
+                children: [
+                  Text(
+                    "Pilih Kelas",
+                    style: TextStyle(fontSize: 25, color: Colors.black),
+                  ),
+                ],
+              ),
               SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => RikikelasPage()),
+                  );
+                  Text(
+                    'PPKN',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
                   );
                 },
                 child: Container(

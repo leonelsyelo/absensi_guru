@@ -1,3 +1,4 @@
+import 'package:absensi_guru/leo_login.dart';
 import 'package:absensi_guru/pages/riki3_page.dart';
 import 'package:absensi_guru/pages/rikiout_page.dart';
 import 'package:absensi_guru/services/kiriservice_page.dart';
@@ -76,10 +77,13 @@ class _RikiPageState extends State<RikiPage> {
                 setState(() {
                   showDialog(
                     context: context,
-                    builder: (context) =>
-                        AlertDialog(title: Text("nama:dr.leo                           "
-                                                "status:guru                           "
-                                                "mapel:agama")),
+                    builder: (context) => AlertDialog(
+                      title: Text(
+                        "nama:dr.leo                           "
+                        "status:guru                           "
+                        "mapel:agama",
+                      ),
+                    ),
                   );
                 });
               },
@@ -103,7 +107,7 @@ class _RikiPageState extends State<RikiPage> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => RikiPage()),
+                  MaterialPageRoute(builder: (context) => LeoLogin()),
                 );
               },
             ),
@@ -128,7 +132,7 @@ class _RikiPageState extends State<RikiPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) =>Riki3Page()),
+                    MaterialPageRoute(builder: (context) => Riki3Page()),
                   );
                 },
                 child: Container(
@@ -160,7 +164,7 @@ class _RikiPageState extends State<RikiPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) =>Riki3Page()),
+                    MaterialPageRoute(builder: (context) => Riki3Page()),
                   );
                 },
                 child: Container(
@@ -192,7 +196,7 @@ class _RikiPageState extends State<RikiPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) =>Riki3Page()),
+                    MaterialPageRoute(builder: (context) => Riki3Page()),
                   );
                 },
                 child: Container(
