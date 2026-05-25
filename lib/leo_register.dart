@@ -169,7 +169,7 @@ class _LeoRegister extends State<LeoRegister> {
                   onPressed: () {
                     if (_name.text == "syello" &&
                         _password.text == "ganteng") {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => RikidasboardPage()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => RikidasboardPage( )));
                       showDialog(
                         context: context,
                         builder: (context) =>

@@ -1,6 +1,5 @@
+import 'package:absensi_guru/leo_login.dart';
 import 'package:absensi_guru/pages/riki3_page.dart';
-import 'package:absensi_guru/pages/rikiout_page.dart';
-import 'package:absensi_guru/services/kiriservice_page.dart';
 import 'package:flutter/material.dart';
 
 class RikiPage extends StatefulWidget {
@@ -103,7 +102,7 @@ class _RikiPageState extends State<RikiPage> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => RikiPage()),
+                  MaterialPageRoute(builder: (context) => LeoLogin()),
                 );
               },
             ),
