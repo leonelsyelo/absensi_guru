@@ -1,15 +1,15 @@
-import 'package:absensi_guru/leo_login.dart';
-import 'package:absensi_guru/pages/riki3_page.dart';
 import 'package:flutter/material.dart';
 
-class RikiPage extends StatefulWidget {
-  const RikiPage({super.key});
+import 'leokelas_page.dart';
+
+class RikimapelPage extends StatefulWidget {
+  const RikimapelPage({super.key});
 
   @override
-  State<RikiPage> createState() => _RikiPageState();
+  State<RikimapelPage> createState() => _RikimapelPageState();
 }
 
-class _RikiPageState extends State<RikiPage> {
+class _RikimapelPageState extends State<RikimapelPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,231 +34,17 @@ class _RikiPageState extends State<RikiPage> {
           ],
         ),
       ),
-      drawer: Drawer(
-        child: Column(
-          children: [
-            AppBar(
-              title: Row(
-                children: [
-                  CircleAvatar(
-                    radius: 30,
-                    backgroundImage: AssetImage("assets/images/gufron.jpg"),
-                  ),
-                  SizedBox(width: 40),
-                  Column(crossAxisAlignment: CrossAxisAlignment.start),
-                ],
-              ),
-            ),
-            TextButton(
-              onPressed: () {
-                setState(() {
-                  showDialog(
-                    context: context,
-                    builder: (context) =>
-                        AlertDialog(title: Text("Silakan edit")),
-                  );
-                });
-              },
-              child: Text(
-                "Edit Profile",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 23),
-              ),
-            ),
-            Divider(color: Colors.black),
-            ListTile(
-              leading: Icon(Icons.account_circle, color: Colors.black),
-              title: Text(
-                "Tentang Saya",
-                style: TextStyle(color: Colors.black),
-              ),
-              onTap: () {
-                setState(() {
-                  showDialog(
-                    context: context,
-                    builder: (context) => AlertDialog(
-                      title: Text(
-                        "nama:dr.leo                           "
-                        "status:guru                           "
-                        "mapel:agama",
-                      ),
-                    ),
-                  );
-                });
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.email, color: Colors.black),
-              title: Text("Email", style: TextStyle(color: Colors.black)),
-              onTap: () {
-                setState(() {
-                  showDialog(
-                    context: context,
-                    builder: (context) =>
-                        AlertDialog(title: Text("leonel@gmail.com")),
-                  );
-                });
-              },
-            ),
-            ListTile(
-              leading: Icon(Icons.output, color: Colors.black),
-              title: Text("Sign Out", style: TextStyle(color: Colors.black)),
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => LeoLogin()),
-                );
-              },
-            ),
-          ],
-        ),
-      ),
       body: Container(
         decoration: BoxDecoration(color: Colors.white),
         child: SingleChildScrollView(
           child: Column(
             children: [
-              Text(
-                'PILIH JURUSAN',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                ),
-              ),
               SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Riki3Page()),
-                  );
-                },
-                child: Container(
-                  padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
-                  height: 80,
-                  decoration: BoxDecoration(
-                    color: Colors.red,
-                    border: Border.all(color: Colors.blue),
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Text(
-                        'RPL',
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(height: 20),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Riki3Page()),
-                  );
-                },
-                child: Container(
-                  padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
-                  height: 80,
-                  decoration: BoxDecoration(
-                    color: Colors.yellow,
-                    border: Border.all(color: Colors.blue),
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Text(
-                        'SIJA',
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(height: 20),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Riki3Page()),
-                  );
-                },
-                child: Container(
-                  padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
-                  height: 80,
-                  decoration: BoxDecoration(
-                    color: Colors.green,
-                    border: Border.all(color: Colors.blue),
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Text(
-                        'LPKC',
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(height: 20),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Riki3Page()),
-                  );
-                },
-                child: Container(
-                  padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
-                  height: 80,
-                  decoration: BoxDecoration(
-                    color: Colors.tealAccent,
-                    border: Border.all(color: Colors.blue),
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Text(
-                        'TKR',
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(height: 20),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Riki3Page()),
+                    MaterialPageRoute(builder: (context) => RikikelasPage()),
                   );
                 },
                 child: Container(
@@ -274,7 +60,7 @@ class _RikiPageState extends State<RikiPage> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        'TBSM',
+                        'PPKN',
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
@@ -290,14 +76,14 @@ class _RikiPageState extends State<RikiPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Riki3Page()),
+                    MaterialPageRoute(builder: (context) => RikikelasPage()),
                   );
                 },
                 child: Container(
                   padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
                   height: 80,
                   decoration: BoxDecoration(
-                    color: Colors.pinkAccent,
+                    color: Colors.red,
                     border: Border.all(color: Colors.blue),
                     borderRadius: BorderRadius.circular(5),
                   ),
@@ -306,7 +92,7 @@ class _RikiPageState extends State<RikiPage> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        'TKJ',
+                        'SEJARAH',
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
@@ -317,15 +103,9 @@ class _RikiPageState extends State<RikiPage> {
                   ),
                 ),
               ),
-
               SizedBox(height: 20),
               ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Riki3Page()),
-                  );
-                },
+                onPressed: () {},
                 child: Container(
                   padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
                   height: 80,
@@ -339,7 +119,7 @@ class _RikiPageState extends State<RikiPage> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        'ANIMASI',
+                        'BHS INGGRIS',
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
@@ -352,17 +132,12 @@ class _RikiPageState extends State<RikiPage> {
               ),
               SizedBox(height: 20),
               ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Riki3Page()),
-                  );
-                },
+                onPressed: () {},
                 child: Container(
                   padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
                   height: 80,
                   decoration: BoxDecoration(
-                    color: Colors.purpleAccent,
+                    color: Colors.pinkAccent,
                     border: Border.all(color: Colors.blue),
                     borderRadius: BorderRadius.circular(5),
                   ),
@@ -371,7 +146,7 @@ class _RikiPageState extends State<RikiPage> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        'DPIB',
+                        'BHS JAWA',
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
@@ -382,20 +157,14 @@ class _RikiPageState extends State<RikiPage> {
                   ),
                 ),
               ),
-
               SizedBox(height: 20),
               ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Riki3Page()),
-                  );
-                },
+                onPressed: () {},
                 child: Container(
                   padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
                   height: 80,
                   decoration: BoxDecoration(
-                    color: Colors.orangeAccent,
+                    color: Colors.white30,
                     border: Border.all(color: Colors.blue),
                     borderRadius: BorderRadius.circular(5),
                   ),
@@ -404,7 +173,196 @@ class _RikiPageState extends State<RikiPage> {
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
                       Text(
-                        'DKV',
+                        'AGAMA',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {},
+                child: Container(
+                  padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
+                  height: 80,
+                  decoration: BoxDecoration(
+                    color: Colors.yellow,
+                    border: Border.all(color: Colors.blue),
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        'SENI BUDAYA',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {},
+                child: Container(
+                  padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
+                  height: 80,
+                  decoration: BoxDecoration(
+                    color: Colors.orange,
+                    border: Border.all(color: Colors.blue),
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        'IPAS',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {},
+                child: Container(
+                  padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
+                  height: 80,
+                  decoration: BoxDecoration(
+                    color: Colors.greenAccent,
+                    border: Border.all(color: Colors.blue),
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        'D RPL',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {},
+                child: Container(
+                  padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
+                  height: 80,
+                  decoration: BoxDecoration(
+                    color: Colors.green,
+                    border: Border.all(color: Colors.blue),
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        'INFORMATIKA',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {},
+                child: Container(
+                  padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
+                  height: 80,
+                  decoration: BoxDecoration(
+                    color: Colors.purple,
+                    border: Border.all(color: Colors.blue),
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        'BHS INDONESIA',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {},
+                child: Container(
+                  padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
+                  height: 80,
+                  decoration: BoxDecoration(
+                    color: Colors.cyanAccent,
+                    border: Border.all(color: Colors.blue),
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        'MATAMATIKA',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {},
+                child: Container(
+                  padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
+                  height: 80,
+                  decoration: BoxDecoration(
+                    color: Colors.blue,
+                    border: Border.all(color: Colors.blue),
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Text(
+                        'PJOK',
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,

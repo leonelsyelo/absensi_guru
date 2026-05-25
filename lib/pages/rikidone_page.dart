@@ -14,35 +14,40 @@ class _RikidonePageState extends State<RikidonePage> {
     var size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-      backgroundColor: Colors.white,
-        title:Row(
-         mainAxisAlignment: MainAxisAlignment.end,
+        backgroundColor: Colors.white,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Icon(Icons.output, size: 20, color: Colors.black,
+            Icon(Icons.output, size: 20, color: Colors.black),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RikiPage()),
+                );
+              },
+              child: null,
             ),
-            ElevatedButton(onPressed: () {
-              Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) =>RikiPage()),
-            );
-            }, child: null),
           ],
         ),
       ),
       body: Container(
-        height:  size.height,
-        width:  size.width,
+        height: size.height,
+        width: size.width,
         decoration: BoxDecoration(
           gradient: LinearGradient(colors: [Colors.white30, Colors.blueAccent]),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.check_circle_outline_outlined, size: 200, color: Colors.lightGreenAccent),
+            Icon(
+              Icons.check_circle_outline_outlined,
+              size: 200,
+              color: Colors.lightGreenAccent,
+            ),
           ],
         ),
       ),
     );
   }
 }
-
