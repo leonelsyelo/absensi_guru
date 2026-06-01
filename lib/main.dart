@@ -1,5 +1,7 @@
 import 'package:absensi_guru/leo_screen.dart';
-import 'package:absensi_guru/pages/rikidone_page.dart';
+import 'package:absensi_guru/pages/leo_isi_kelas_page.dart';
+import 'package:absensi_guru/pages/leo_kelas_page.dart';
+import 'package:absensi_guru/pages/riki_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -17,6 +19,6 @@ class AbsensiGuru extends StatefulWidget {
 class _MyAbsensi extends State<AbsensiGuru> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home:LeoScreen());
+    return MaterialApp(debugShowCheckedModeBanner: false, home:RikiPage());
   }
 }

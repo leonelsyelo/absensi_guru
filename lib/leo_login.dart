@@ -104,7 +104,7 @@ class _LeoLogin extends State<LeoLogin> {
                 if (_username.text == "l" && _password.text == "l") {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => RikidasboardPage()),
+                    MaterialPageRoute(builder: (context) => RikidasboardPage(id: 1,)),
                   );
                   showDialog(
                     context: context,

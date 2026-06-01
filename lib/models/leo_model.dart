@@ -1,6 +1,9 @@
-class LeoModel {
-  final int id;
-  final String judul;
+import 'package:flutter/widgets.dart';
 
-  LeoModel({required this.id, required this.judul});
+class LeoModel {
+  final String jurusan;
+  final int id;
+  final Widget screen;
+
+  LeoModel({required this.jurusan, required this.id, required this.screen});
 }

@@ -1,19 +1,18 @@
 class LeoKelasModel {
-  final int idt;
-  final String kelas;
+  final String jurusan;
   final String nama;
   final int absen;
 
-  LeoKelasModel({required this.idt, required this.kelas, required this.nama, required this.absen});
-
-
+  LeoKelasModel({
+    required this.jurusan,
+    required this.nama,
+    required this.absen,
+  });
 }
-class Jurusan{
+
+class Jurusan {
   final int id;
-  final String jurusan;
-  final List<LeoKelasModel> isi;
+  final String classjurusan;
 
-  Jurusan({required this.id, required this.jurusan,required this.isi});
-
-
+  Jurusan({required this.id, required this.classjurusan});
 }

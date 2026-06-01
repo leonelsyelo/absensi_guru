@@ -15,7 +15,7 @@ class _LeoScreen extends State<LeoScreen> {
   @override
   void initState() {
     w = Timer.periodic(
-      const Duration(seconds: 1),
+      const Duration(seconds: 4),
       (timer) => Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => LeoLogin()),

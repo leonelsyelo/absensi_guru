@@ -6,7 +6,7 @@ import 'package:absensi_guru/pages/rikiout_page.dart';
 import 'package:flutter/material.dart';
 
 class RikidasboardPage extends StatefulWidget {
-  const RikidasboardPage({super.key});
+  const RikidasboardPage({super.key, required int id});
 
   @override
   State<RikidasboardPage> createState() => _RikidasboardPageState();
