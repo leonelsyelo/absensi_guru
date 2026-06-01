@@ -1,3 +1,4 @@
+import 'package:absensi_guru/pages/riki3_page.dart';
 import 'package:flutter/material.dart';
 
 import 'leokelas_page.dart';
@@ -42,10 +43,6 @@ class _RikimapelPageState extends State<RikimapelPage> {
               SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => RikikelasPage()),
-                  );
                 },
                 child: Container(
                   padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
@@ -74,10 +71,6 @@ class _RikimapelPageState extends State<RikimapelPage> {
               SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => RikikelasPage()),
-                  );
                 },
                 child: Container(
                   padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
