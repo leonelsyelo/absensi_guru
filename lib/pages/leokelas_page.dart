@@ -1,19 +1,19 @@
- import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
-class RikikelasPage extends StatefulWidget {
-  const RikikelasPage({super.key});
+class LeokelasPage extends StatefulWidget {
+  const LeokelasPage({super.key, required int id});
 
   @override
-  State<RikikelasPage> createState() => _RikikelasPageState();
+  State<LeokelasPage> createState() => _LeokelasPageState();
 }
 
-class _RikikelasPageState extends State<RikikelasPage> {
+class _LeokelasPageState extends State<LeokelasPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-            backgroundColor: Colors.blue,
-          title: Column(
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        title: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Text(
@@ -34,13 +34,13 @@ class _RikikelasPageState extends State<RikikelasPage> {
             )
           ],
         ),
-        ),
-        body: Container(
-            decoration: BoxDecoration(color: Colors.white),
-            child: SingleChildScrollView(
-              child: Column(
-                children: [
-                Text(
+      ),
+      body: Container(
+        decoration: BoxDecoration(color: Colors.white),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Text(
                 'PILIH KELAS',
                 style: TextStyle(
                   fontSize: 40,
@@ -49,10 +49,10 @@ class _RikikelasPageState extends State<RikikelasPage> {
                 ),
               ),
               SizedBox(height: 20),
-              ],
-            ),
+            ],
+          ),
         ),
-        ),
+      ),
     );
   }
 }

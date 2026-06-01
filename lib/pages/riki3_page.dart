@@ -1,4 +1,3 @@
-import 'package:absensi_guru/pages/rikimapel_page.dart';
 import 'package:flutter/material.dart';
 
 class Riki3Page extends StatefulWidget {
@@ -57,10 +56,6 @@ class _Riki3PageState extends State<Riki3Page> {
               SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) =>RikimapelPage()),
-                  );
                 },
                 child: Container(
                   padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
@@ -93,10 +88,6 @@ class _Riki3PageState extends State<Riki3Page> {
               SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => RikimapelPage()),
-                  );
                 },
                 child: Container(
                   padding: EdgeInsets.fromLTRB(15, 20, 15, 20),

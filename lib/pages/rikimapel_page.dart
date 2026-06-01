@@ -51,8 +51,8 @@ class _RikimapelPageState extends State<RikimapelPage> {
               Row(
                 children: [
                   Text(
-                    "Pilih Mapel",
-                    style: TextStyle(fontSize: 35, color: Colors.black),
+                    "Pilih Kelas",
+                    style: TextStyle(fontSize: 25, color: Colors.black),
                   ),
                 ],
               ),
