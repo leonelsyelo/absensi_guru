@@ -21,12 +21,6 @@ class _RikidasboardPageState extends State<RikidasboardPage> {
       color: Colors.white,
     ),
     1: Riki2Models(
-      page: RikihistoryPage(),
-      icon: Icons.history,
-      label: "History",
-      color: Colors.white,
-    ),
-    2: Riki2Models(
       page: RikioutPage(),
       icon: Icons.output,
       label: "Out",

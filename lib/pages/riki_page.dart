@@ -1,4 +1,5 @@
 import 'package:absensi_guru/leo_login.dart';
+import 'package:absensi_guru/pages/leo_rpl_page.dart';
 import 'package:absensi_guru/pages/riki3_page.dart';
 import 'package:flutter/material.dart';
 
@@ -130,7 +131,7 @@ class _RikiPageState extends State<RikiPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Riki3Page()),
+                    MaterialPageRoute(builder: (context) => LeoRplPage()),
                   );
                 },
                 child: Container(

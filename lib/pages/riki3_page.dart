@@ -85,7 +85,7 @@ class _Riki3PageState extends State<Riki3Page> {
                                 ),
                               ),
                               Text(
-                                'senin 5 mei 2026',
+                                'selasa 2 juni 2026',
                                 style: TextStyle(
                                   fontSize: 14,
                                   fontWeight: FontWeight.bold,

@@ -1,5 +1,6 @@
 import 'package:absensi_guru/pages/leo_kelas_page.dart';
 import 'package:absensi_guru/pages/rikidasboard_page.dart';
+import 'package:absensi_guru/pages/rikidone_page.dart';
 import 'package:flutter/material.dart';
 
 import '../services/leo_nama_service.dart';
@@ -15,9 +16,8 @@ class LeoNamaPage extends StatefulWidget {
 class _LeoNamaPage extends State<LeoNamaPage> {
   @override
   Widget build(BuildContext context) {
-    var index;
+    var isi = pilih[widget.ids].isi;
     return Scaffold(
-
       appBar: AppBar(
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -41,30 +41,20 @@ class _LeoNamaPage extends State<LeoNamaPage> {
             ),
           ],
         ),
-        backgroundColor: Colors.blueAccent,
-        actions: [
-          IconButton(
-            onPressed: () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => LeoKelasPage(id: widget.ids),
-              ),
-            ),
-            icon: Icon(Icons.add),
-          ),
-        ],
+        backgroundColor: Colors.blue,
+        actions: [],
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(height: 2),
           Padding(
-            padding: const EdgeInsets.all(8),
+            padding: EdgeInsets.all(8),
             child: Text(
               pilih[widget.ids].namaJurusan,
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: Colors.black,
+                color: Colors.white,
                 fontSize: 20,
               ),
             ),
@@ -73,22 +63,15 @@ class _LeoNamaPage extends State<LeoNamaPage> {
           Expanded(
             child: ListView.builder(
               itemCount: pilih[widget.ids].isi.length,
-              itemBuilder: (context, index) {
+              itemBuilder: (context, i) {
                 return Card(
-                  color: Colors.lightBlueAccent,
+                  color: Colors.grey,
                   elevation: 5,
                   margin: EdgeInsets.fromLTRB(10, 5, 10, 5),
                   child: ListTile(
-                    leading: ClipRRect(
-                      borderRadius: BorderRadius.circular(7),
-                      child: Image.asset(
-                        pilih[widget.ids].isi[index].nama,
-                        width: 40,
-                        height: 40,
-                      ),
-                    ),
+                    leading: ClipRRect(borderRadius: BorderRadius.circular(7)),
                     title: Text(
-                      pilih[widget.ids].isi[index].nama,
+                      pilih[widget.ids].isi[i].nama,
                       style: TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.bold,
@@ -96,14 +79,14 @@ class _LeoNamaPage extends State<LeoNamaPage> {
                       ),
                     ),
                     subtitle: Text(
-                      pilih[widget.ids].isi[index].nama,
+                      pilih[widget.ids].isi[i].nama,
                       style: TextStyle(fontSize: 10),
                     ),
                     trailing: Row(
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Text(
-                          "Lengkap:",
+                          "Masuk/Tidak:",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
@@ -112,10 +95,10 @@ class _LeoNamaPage extends State<LeoNamaPage> {
                         ),
                         SizedBox(width: 5),
                         Icon(
-                          pilih[widget.ids].isi[index].mark
+                          pilih[widget.ids].isi[i].mark
                               ? Icons.check
                               : Icons.cancel,
-                          color: pilih[widget.ids].isi[index].mark
+                          color: pilih[widget.ids].isi[i].mark
                               ? Colors.green
                               : Colors.red,
                         ),
@@ -123,14 +106,44 @@ class _LeoNamaPage extends State<LeoNamaPage> {
                     ),
                     onTap: () {
                       setState(() {
-                        pilih[widget.ids].isi[index].mark =
-                            !pilih[widget.ids].isi[index].mark;
+                        pilih[widget.ids].isi[i].mark =
+                            !pilih[widget.ids].isi[i].mark;
                       });
                     },
                   ),
                 );
               },
             ),
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: EdgeInsets.all(10.0),
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.blueAccent,
+                    padding: EdgeInsets.symmetric(horizontal: 40, vertical: 12),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(4),
+                    ),
+                  ),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => RikidonePage()),
+                    );
+                  },
+                  child: Text(
+                    'KIRIM',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+            ],
           ),
         ],
       ),

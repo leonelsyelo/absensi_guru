@@ -1,3 +1,4 @@
+import 'package:absensi_guru/pages/leo_nama_page.dart';
 import 'package:flutter/material.dart';
 
 import 'leokelas_page.dart';
@@ -44,7 +45,9 @@ class _RikimapelPageState extends State<RikimapelPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => RikikelasPage()),
+                    MaterialPageRoute(
+                      builder: (context) => LeoNamaPage(ids: 4),
+                    ),
                   );
                 },
                 child: Container(
@@ -76,7 +79,9 @@ class _RikimapelPageState extends State<RikimapelPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => RikikelasPage()),
+                    MaterialPageRoute(
+                      builder: (context) => LeoNamaPage(ids: 3),
+                    ),
                   );
                 },
                 child: Container(
@@ -105,7 +110,14 @@ class _RikimapelPageState extends State<RikimapelPage> {
               ),
               SizedBox(height: 20),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => LeoNamaPage(ids: 1),
+                    ),
+                  );
+                },
                 child: Container(
                   padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
                   height: 80,
@@ -132,7 +144,14 @@ class _RikimapelPageState extends State<RikimapelPage> {
               ),
               SizedBox(height: 20),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => LeoNamaPage(ids: 1),
+                    ),
+                  );
+                },
                 child: Container(
                   padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
                   height: 80,
@@ -159,7 +178,14 @@ class _RikimapelPageState extends State<RikimapelPage> {
               ),
               SizedBox(height: 20),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => LeoNamaPage(ids: 1),
+                    ),
+                  );
+                },
                 child: Container(
                   padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
                   height: 80,
