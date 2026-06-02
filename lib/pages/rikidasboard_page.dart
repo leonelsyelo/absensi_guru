@@ -1,4 +1,3 @@
-import 'package:absensi_guru/leo_login.dart';
 import 'package:absensi_guru/models/riki2_models.dart';
 import 'package:absensi_guru/pages/riki_page.dart';
 import 'package:absensi_guru/pages/rikihistory_page.dart';

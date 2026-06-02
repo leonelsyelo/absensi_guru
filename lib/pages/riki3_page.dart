@@ -1,3 +1,4 @@
+import 'package:absensi_guru/pages/rikimapel_page.dart';
 import 'package:flutter/material.dart';
 
 class Riki3Page extends StatefulWidget {
@@ -32,6 +33,7 @@ class _Riki3PageState extends State<Riki3Page> {
           ],
         ),
       ),
+
       body: Container(
         decoration: BoxDecoration(color: Colors.white),
         child: SingleChildScrollView(
@@ -53,9 +55,92 @@ class _Riki3PageState extends State<Riki3Page> {
                   color: Colors.black,
                 ),
               ),
+              SizedBox(height: 25),
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(15),
+                  border: Border.all(color: Colors.black, width: 1),
+                ),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding: EdgeInsets.all(12),
+                      child: Row(
+                        children: [
+                          Icon(
+                            Icons.calendar_month,
+                            size: 35,
+                            color: Colors.black,
+                          ),
+                          SizedBox(width: 12),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'tanggal',
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: Colors.black,
+                                ),
+                              ),
+                              Text(
+                                'senin 5 mei 2026',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                    Divider(height: 1, color: Colors.black),
+                    Padding(
+                      padding: EdgeInsets.all(12),
+                      child: Row(
+                        children: [
+                          Icon(
+                            Icons.access_time,
+                            size: 35,
+                            color: Colors.black,
+                          ),
+                          SizedBox(width: 12),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'waktu saat ini',
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: Colors.black,
+                                ),
+                              ),
+                              Text(
+                                '07.15.30',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.blue,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
               SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => RikimapelPage()),
+                  );
                 },
                 child: Container(
                   padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
@@ -88,6 +173,10 @@ class _Riki3PageState extends State<Riki3Page> {
               SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => RikimapelPage()),
+                  );
                 },
                 child: Container(
                   padding: EdgeInsets.fromLTRB(15, 20, 15, 20),
